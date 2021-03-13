@@ -1,0 +1,139 @@
+body {
+  margin: 0px;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper{
+  position: relative;
+  min-height: 100vh;
+}
+
+.container{
+  width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.top-wrapper{
+  padding-top: 180px;
+  padding-bottom: 400px;
+  background-image: url("/images/top-background.jpg");
+  color: white;
+  background-size: cover;
+  text-align: center;
+}
+
+.top-wrapper h1{
+  font-size: 45px;
+  opacity: 0.7;
+  letter-spacing: 4px;
+}
+
+.top-wrapper p{
+  opacity: 0.7;
+}
+
+.btn{
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.signup{
+  background-color:#2e8b57;
+}
+
+.btn:hover{
+  opacity: 1;
+}
+
+.btn-wrapper p{
+  margin: 10px;
+}
+
+.add-icon{
+  margin-right: 5px;
+}
+
+header{
+  height: 65px;
+  width: 100%;
+  background-color: rgba(34,49,52,0.9);
+  margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.logo{
+  margin-top: 16px;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.login-icon{
+  margin-left: 5px;
+}
+
+.header-left{
+  float: left;
+}
+
+.header-right{
+  float: right;
+  background-color: rgba(255,255,255,0.3);
+  transition: all 0.5s;
+}
+
+.header-right:hover{
+  background-color: rgba(255,255,255,0.5);
+}
+
+.login{
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+}
+
+.message{
+  background-color: #5dca88;
+  padding: 15px 40px;
+  cursor: pointer;
+  box-shadow: 0px 7px #1a7940;
+}
+
+.message:active{
+  box-shadow: none;
+  position: relative;
+  top: 7px;
+}
+
+.heading h3{
+  font-weight: normal;
+}
+
+.message-wrapper{
+  border-bottom: 1px solid #f7f7f7;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.logo-footer{
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+footer{
+  width: 100%;
+  background-color: rgba(34,49,52,0.2);
+  padding-top: 30px;
+  position: absolute;
+}
+

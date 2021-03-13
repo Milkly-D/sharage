@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <h2 class="logo">Sharage<span class="far fa-folder-open login-icon"></span></h2>
+        </div>
+        <div class="header-right">
+          <%= link_to("ログイン","/users/new",class: "login") %>
+        </div>
+      </div>
+    </header>
+
+    <%= yield %>
+
+  <footer>
+    <div class="container"></div>
+    <h2 class="logo-footer">Sharage<span class="far fa-folder-open footer-icon"></span></h2>
+  </footer>  
+  </body>
+</html>

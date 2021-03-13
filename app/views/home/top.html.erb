@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <div class="top-wrapper">
+    <div class="container">
+      <h1>Share Files</h1>
+      <p>Sharageは簡単にファイルを共有できるコミュニティです。</p>
+
+      <div class="btn-wrapper">
+        <%= link_to("/users/new",class: "btn signup") do %>
+          <span class="fa fa-user-plus add-icon"></span>
+          新規登録はこちら
+        <% end %>
+        <p>or sign up with</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="message-wrapper">
+    <div class="container">
+      <div class="heading">
+        <h2>さあ、あなたもコミュニティに参加してみましょう！</h2>
+        <h3>Let's join the community !</h3>
+      </div>
+      <%= link_to("参加する","/users/new",class: "btn message") %>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container"></div>
+    <h2 class="logo-footer">Sharage<span class="far fa-folder-open footer-icon"></span></h2>
+  </footer> 
+</div>
