@@ -5,27 +5,63 @@
       <p>Sharageは簡単にファイルを共有できるコミュニティです。</p>
 
       <div class="btn-wrapper">
-        <%= link_to("/users/new",class: "btn signup") do %>
-          <span class="fa fa-user-plus add-icon"></span>
-          新規登録はこちら
-        <% end %>
-        <p>or sign up with</p>
+        <div class="btn signup" id="signup-show"><span class="fa fa-user-plus add-icon"></span>Sign Up</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="function-wrapper">
+    <div class="container scrollanime downup">
+      <div class="heading">
+        <h1>Functions</h1>
+      </div>
+      <div class="functions">
+        <div class="function">
+          <div class="function-icon">
+            <i class="far fa-share-square function-params"></i>
+            <p class="function-name">Files share</p>
+          </div>
+        </div>
+        <div class="function">
+          <div class="function-icon">
+            <i class="far fa-comments function-params"></i>
+            <p class="function-name">Talk</p>
+          </div>
+        </div>
+        <div class="function">
+          <div class="function-icon">
+            <i class="far fa-envelope function-params"></i>
+            <p class="function-name">Direct mail</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="message-wrapper">
-    <div class="container">
+    <div class="container scrollanime slide-right">
       <div class="heading">
-        <h2>さあ、あなたもコミュニティに参加してみましょう！</h2>
-        <h3>Let's join the community !</h3>
+        <h2>Let's join the community !</h2>
+        <h3>コミュニティに参加してみましょう！</h3>
       </div>
-      <%= link_to("参加する","/users/new",class: "btn message") %>
+      <%= link_to("join","/users/new",class: "btn message") %>
     </div>
   </div>
-  
+
   <footer>
-    <div class="container"></div>
-    <h2 class="logo-footer">Sharage<span class="far fa-folder-open footer-icon"></span></h2>
+    <div class="container">
+      <div class="footer-left">
+        <h2 class="footer-logo">Sharage<span class="far fa-folder-open footer-icon"></span></h2>
+      </div>
+      <div class="footer-right">
+        <h2>
+          <div class="fab fa-2x fa-twitter"></div>
+          <div class="fab fa-2x fa-github"></div>
+        </h2>
+      </>
+    </div>
   </footer> 
 </div>
+
+
+

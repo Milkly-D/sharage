@@ -1,6 +1,8 @@
 body {
   margin: 0px;
   font-family: "Hiragino Kaku Gothic ProN";
+  height: 100%;
+  width: 100%;
 }
 
 a {
@@ -28,25 +30,29 @@ a {
 }
 
 .top-wrapper h1{
-  font-size: 45px;
-  opacity: 0.7;
+  padding-top: 20px;
+  font-size: 55px;
+  opacity: 1.0;
   letter-spacing: 4px;
 }
 
 .top-wrapper p{
-  opacity: 0.7;
+  font-size: 19px;
+  opacity: 1.0;
 }
 
 .btn{
   padding: 8px 24px;
   color: white;
   display: inline-block;
-  opacity: 0.8;
+  opacity: 1.0;
   border-radius: 4px;
 }
 
 .signup{
   background-color:#2e8b57;
+  margin-top: 30px;
+  font-size: 20px;
 }
 
 .btn:hover{
@@ -102,6 +108,107 @@ header{
   display: block;
 }
 
+.login-user{
+  margin-right: 5px;
+}
+
+.login-modal-wrapper,.singup-modal-wrapper{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 100;
+  display: none;
+}
+
+.modal{
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  background-color: #e6ecf0;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 450px;
+  height: auto;
+  text-align: center;
+}
+
+.fa-times{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128,128,128,0.46);
+  cursor: pointer;
+}
+
+#signup-form,#login-form{
+  width: 100%;
+}
+
+#signup-form h2,#login-form h2{
+  color: #5f5d60;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+#signup-form input,#login-form input{
+  width: 320px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  padding: 12px 12px;
+  border: 1px solid #d0d5d8;
+  border-radius: 1px;
+}
+
+#submit-btn{
+  display: inline-block;
+  padding: 14px 140px;
+  background-color: #5dca88;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.function-wrapper{
+  height: 400px;
+  padding-bottom: 80px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.heading{
+  padding: 60px 0 30px 0;
+  color: #5f5d60;
+  letter-spacing: 1px;
+}
+
+.heading h1{
+  font-weight: bold;
+}
+
+.function{
+  float: left;
+  width: 33%;
+  position: relative;
+}
+
+.function-params{
+  font-size: 9em;
+  color: rgba(34,49,52,0.9);
+}
+
+.function-name{
+  margin: 20px;
+  font-size: 30px;
+  color: rgba(34,49,52,0.9);
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
 .message{
   background-color: #5dca88;
   padding: 15px 40px;
@@ -120,8 +227,8 @@ header{
 }
 
 .message-wrapper{
-  border-bottom: 1px solid #f7f7f7;
-  padding-bottom: 80px;
+  border-bottom: 1px solid #ffff;
+  padding-bottom: 100px;
   text-align: center;
 }
 
@@ -131,9 +238,65 @@ header{
 }
 
 footer{
+  height: 65px;
   width: 100%;
-  background-color: rgba(34,49,52,0.2);
-  padding-top: 30px;
+  background-color: #f7f7f7;
   position: absolute;
+  bottom: 0;
+  border-top:  1px solid rgba(34,49,52,0.1);
+  z-index: 10;
+}
+.footer-log{
+  color: rgba(34,49,52,0.9);
 }
 
+.footer-icon{
+  color: rgba(34,49,52,0.9);
+  margin-left: 5px;
+}
+
+.footer-left{
+  float: left;
+}
+
+.footer-right{
+  float: right;
+  height: 65px;
+  margin: 0 auto;
+}
+
+.fa-twitter{
+  padding-right: 10px;
+  color: #00acee;
+}
+
+.fa-github{
+  color: #171515;
+}
+
+/* animation */
+/*1.フェードインアニメーションの指定*/
+.scrollanime {opacity: 0;} /*一瞬表示されるのを防ぐ*/
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;         
+    }
+    100% {
+    opacity: 1;
+    transform: translate(0);
+    }
+}
+ 
+/*2.上下の動きを指定*/
+.updown {transform: translateY(-100px);}
+.downup {transform: translateY(100px);}
+ 
+/*3.左右の動きを指定*/
+.sect02{overflow: hidden;} /*横スクロールバーを隠す*/
+.slide-right {transform: translateX(200px);}
+.slide-left {transform: translateX(-200px);}
